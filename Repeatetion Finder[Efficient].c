@@ -13,7 +13,7 @@ int main()
         {
             continue;
         }
-        for(y=0;y<=lenght-1;y++)
+        for(y=1;y<=lenght-1;y++)
         {
             if(data[x]==data[y]&&x!=y)
             {
