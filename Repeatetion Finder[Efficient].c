@@ -21,7 +21,7 @@ int main()
                 data[y]='\0';
             }
         }
-        if(count>0)
+        if(count>=0)
         {
             printf("%c is repeated %d times\n", data[x],count);
             count=0;

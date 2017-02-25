@@ -3,15 +3,15 @@
 #include <string.h>
 int main()
 {
-    char data[]="12123",temp;
-    int x,y,count=0,lenght;
-    //scanf("%[^\n]", &data);
+    char data[100],temp;
+    int x=0,y,count=0,lenght;
+    scanf("%[^\n]", &data);
     lenght=strlen(data);
-    for(x=0;x<=lenght-1;x++)
+    while(lenght>=1)
     {
         for(y=lenght-1;y>0;y--)
         {
-            if(x!=y&&data[x]==data[y])
+            if(data[x]==data[y])
             {
                 count++;
                 temp=data[lenght-1];
@@ -23,5 +23,11 @@ int main()
         }
         printf("%c is repeated %d times\n", data[x], count);
         count=0;
+        temp=data[lenght-1];
+        data[lenght-1]=data[x];
+        data[lenght-1]='\0';
+        data[x]=temp;
+        lenght--;
     }
+    getch();
 }
